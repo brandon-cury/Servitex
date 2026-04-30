@@ -3,140 +3,165 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 230px;
   font-size: 1rem;
-  color: $color-black;
-  font-family: "Inter", sans-serif;
+  color: $black;
+  font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 
 }
 body{
-  background-color: $background-app;
+  background-color: $bg-light;
   width: 100%;
   overflow-x: hidden;
 }
+// Navbar
+.navbar {
+  background-color: $white !important;
+  border-bottom: 1px solid $gris;
+  padding: 0;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Cormorant Garamond", serif;
-  color: $color-black;
+  .container-fluid {
+    align-items: stretch;
+    padding: 0 2rem;
+  }
+
+  // Logo
+  .navbar-brand {
+    padding: 1rem 0;
+  }
+
+  // Bloc contacts + menu
+  .navbar-collapse {
+    padding: 0;
+
+    // Ligne contacts
+    .tel-email {
+      padding: 0.5rem 0;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1.5rem !important;
+
+      // Séparateur | entre tel et email
+      a:first-child::after {
+        content: '|';
+        margin-left: 1.5rem;
+        color: $gris;
+      }
+
+      a {
+        color: $primary;
+        font-size: 0.875rem;
+        text-decoration: none;
+      }
+    }
+
+    // Ligne menu
+    .navbar-nav {
+      gap: 0.25rem;
+      padding: 0.25rem 0;
+
+      .nav-link {
+        color: $text-dark;
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        position: relative;
+        transition: color 0.2s;
+
+        // Barre du bas via ::before (fonctionne pour TOUS les liens,
+        // dropdown ou non, sans conflit avec la flèche Bootstrap)
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 1rem;
+          right: 1rem;
+          height: 3px;
+          background-color: $accent;
+          border-radius: 2px;
+          transform: scaleX(0);
+          transition: transform 0.25s ease;
+      }
+
+    // On neutralise complètement le ::after Bootstrap sur le dropdown-toggle
+    // pour qu'il ne perturbe plus la bordure
+    &.dropdown-toggle::after {
+    display: inline-block; // comportement normal de la flèche
+    margin-left: 0.4em;
+    vertical-align: middle;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+    // Pas de background, pas de position absolute → la flèche reste une flèche
+    }
+
+  &.active {
+    color: $primary;
+    font-weight: 600;
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &:hover {
+    color: $primary;
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
 }
-h1::first-letter,
-h2::first-letter,
-h3::first-letter,
-h4::first-letter,
-h5::first-letter,
-h6::first-letter {
-  text-transform: uppercase;
+
+      // Dropdown
+      .dropdown-menu {
+        border: 1px solid $gris;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 16px rgba($black, 0.08);
+        padding: 0.5rem;
+
+        .dropdown-item {
+          color: $text-dark;
+          font-size: 0.9rem;
+          border-radius: 0.25rem;
+          padding: 0.5rem 1rem;
+
+          &:hover {
+            background-color: rgba($primary, 0.15);
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  @include respond(desktop) {
+  .dropdown {
+    &:hover > .dropdown-menu {
+      display: block;        // affiche le menu
+      opacity: 1;
+      visibility: visible;
+      border-radius: 0;
+    }
+
+    // Empêche le menu de clignoter entre le lien et le menu
+    .dropdown-menu {
+      margin-top: 0;
+    }
+  }
 }
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
 }
-h1 {
-  font-size: calc(1.476rem + 0.1vw);
-  font-weight: bold;
-}
-h2 {
-  font-size: calc(1.383rem + 0.1vw);
-  font-weight: 700;
-  text-transform: capitalize;
-  padding-left: 12px;
-}
-h3 {
-  position: relative;
-  //font-size: calc(1.602rem + 1.5vw);
-  font-size: calc(1.296rem + 0.1vw);;
-}
-h4 {
-  font-size: calc(1.215rem + 0.1vw);
-}
-h5 {
-  font-size: calc(1.138rem + 0.1vw);
-}
-h6 {
-  font-size: calc(1.067rem + 0.1vw);
-}
-p{
-  font-size: calc(1rem + 0.1vw);
-}
-.small{
-  font-size: calc(0.937rem + 0.1vw);
-}
-a{
-  text-decoration: none;
-}
+
+
 
 /* endSetting */
 /* Navbar principale*/
 
-.phone{
-  display: block;
-}
-.pc{
-  display: none;
-}
 /* endNavbar principale*/
 
 /* debut footer */
 footer {
-  background-color: $color-black;
-  color: $color-white;
-  font-size: 16px;
-  overflow: hidden;
+
 }
 /* end footer */
-/* Tablette */
-@media screen and (min-width: 768px) {
-  /* seting */
-  h1 {
-    font-size: calc(1.476rem + 0.2vw);
-  }
-  h2 {
-    font-size: calc(1.383rem + 0.2vw);
-  }
-  h3 {
-    font-size: calc(1.296rem + 0.2vw);;
-  }
-  h4 {
-    font-size: calc(1.215rem + 0.2vw);
-  }
-  h5 {
-    font-size: calc(1.138rem + 0.2vw);
-  }
-  h6 {
-    font-size: calc(1.067rem + 0.2vw);
-  }
-  p {
-    font-size: calc(1rem + 0.2vw);
-  }
-  .small{
-    font-size: calc(0.937rem + 0.1vw);
-  }
-  /* endSeting */
-
-  /* Footer Tab*/
-  footer {
-
-  }
-  /* endFooter  Tab*/
-
-}
-/* endTablette */
-/* Desktops */
-@media screen and (min-width: 992px) {
-  .phone{
-    display: none;
-  }
-  .pc{
-    display: block;
-  }
-
-}
-/* endDesktops */
