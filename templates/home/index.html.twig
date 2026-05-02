@@ -54,261 +54,549 @@
   </div>
 </nav>
 
+<section class="hero">
 
-{# hero.html.twig #}
-<section class="hero" aria-label="Blanchisserie industrielle et hospitalière">
+  <video class="hero-photo" autoplay muted loop playsinline>
+    <source src="{{ asset('header.mp4') }}" type="video/mp4">
+  </video>
 
-  {# === BACKGROUND LAYER === #}
-  <div class="hero__bg">
-    <div class="hero__bg-gradient"></div>
-    <div class="hero__bg-noise"></div>
-    <div class="hero__bg-grid"></div>
-  </div>
+  <div class="hero-content">
 
-  {# === ORGANIC CURVES SVG === #}
-  <div class="hero__curves">
-    <svg class="hero__curve hero__curve--1" viewBox="0 0 800 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,0 C200,80 400,0 600,120 C750,200 800,100 800,0 Z" fill="rgba(255,255,255,0.04)"/>
-    </svg>
-    <svg class="hero__curve hero__curve--2" viewBox="0 0 1000 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,400 C150,300 300,380 500,320 C700,260 850,320 1000,280 L1000,400 Z" fill="rgba(178,212,0,0.12)"/>
-    </svg>
-    <svg class="hero__curve hero__curve--3" viewBox="0 0 600 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M600,0 C520,150 580,300 500,450 C420,600 480,700 600,800 Z" fill="rgba(30,90,160,0.15)"/>
-    </svg>
-  </div>
-
-  {# === FLOATING PARTICLES === #}
-  <div class="hero__particles" aria-hidden="true">
-    {% for i in 1..12 %}
-      <span class="hero__particle hero__particle--{{ i }}"></span>
-    {% endfor %}
-  </div>
-
-  {# === MAIN CONTENT WRAPPER === #}
-  <div class="hero__container">
-
-    {# LEFT — TEXT CONTENT #}
-    <div class="hero__content">
-
-      <div class="hero__badge">
-        <span class="hero__badge-dot"></span>
-        <span class="hero__badge-text">au cœur de la Région Wallonne</span>
-      </div>
-
-      <h1 class="hero__title">
-        <span class="hero__title-line hero__title-line--dark">Blanchisserie</span>
-        <span class="hero__title-line hero__title-line--accent">industrielle et</span>
-        <span class="hero__title-line hero__title-line--accent">hospitalière</span>
-      </h1>
-
-      <p class="hero__desc">
-        Depuis 1956, Servitex accompagne les professionnels de la santé et de l'industrie
-        avec un service de blanchisserie fiable, durable et de proximité.
-      </p>
-
-      <div class="hero__actions">
-        <a href="#services" class="hero__btn hero__btn--primary">
-          <span class="hero__btn-text">Découvrir nos services</span>
-          <span class="hero__btn-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </span>
-          <span class="hero__btn-ripple"></span>
-        </a>
-        <a href="#contact" class="hero__btn hero__btn--ghost">
-          <span>Nous contacter</span>
-        </a>
-      </div>
-
-      {# STATS ROW #}
-      <div class="hero__stats">
-        <div class="hero__stat">
-          <span class="hero__stat-num" data-count="1956">1956</span>
-          <span class="hero__stat-label">Fondée en</span>
-        </div>
-        <div class="hero__stat-sep" aria-hidden="true"></div>
-        <div class="hero__stat">
-          <span class="hero__stat-num" data-count="68">68</span>
-          <span class="hero__stat-label">Années d'expertise</span>
-        </div>
-        <div class="hero__stat-sep" aria-hidden="true"></div>
-        <div class="hero__stat">
-          <span class="hero__stat-num">ISO</span>
-          <span class="hero__stat-label">Certifiée 9001</span>
-        </div>
-      </div>
-
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Depuis 1956
     </div>
 
-    {# RIGHT — IMAGE PANE #}
-    <div class="hero__visual">
+    <h1>Blanchisserie</h1>
+    <h2>industrielle et hospitalière</h2>
 
-      {# DECORATIVE RING #}
-      <div class="hero__ring hero__ring--outer" aria-hidden="true">
-        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="250" cy="250" r="240" fill="none" stroke="rgba(178,212,0,0.3)" stroke-width="1" stroke-dasharray="8 14"/>
-        </svg>
-      </div>
-      <div class="hero__ring hero__ring--inner" aria-hidden="true">
-        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="200" cy="200" r="190" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4 10"/>
-        </svg>
-      </div>
+    <div class="hero-separator">
+      <span class="sep-green"></span>
+      <span class="sep-blue"></span>
+    </div>
 
-      {# IMAGE FRAME #}
-      <div class="hero__image-frame">
-        <div class="hero__image-mask">
-          <img
-            src="{{ asset('images/hero-laundry.jpg') }}"
-            alt="Technicienne Servitex au travail dans la blanchisserie"
-            class="hero__image"
-            loading="eager"
-            width="680"
-            height="580"
-          />
-          <div class="hero__image-overlay"></div>
+    <div class="hero-dot">
+      <span class="dot"></span>
+      au cœur de la Région Wallonne
+    </div>
+
+    <p>Depuis 1956, Servitex accompagne les professionnels de la santé et de l'industrie avec un service de blanchisserie <strong>fiable, durable et de proximité.</strong></p>
+
+    <a href="#" class="hero-btn">
+      Découvrir nos services
+      <span class="hero-btn-icon">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <path d="M1 5h8M5 1l4 4-4 4" stroke="#0E182D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </a>
+
+  </div>
+
+  <svg class="hero-courbe" viewBox="0 0 680 340" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="zoneGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#F5F8FB" stop-opacity="0.5"/>
+        <stop offset="18%"  stop-color="#F5F8FB" stop-opacity="0.96"/>
+        <stop offset="100%" stop-color="#F5F8FB" stop-opacity="0.97"/>
+      </linearGradient>
+      <linearGradient id="traitGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#0D47A1" stop-opacity="0"/>
+        <stop offset="25%"  stop-color="#0D47A1" stop-opacity="0.8"/>
+        <stop offset="50%"  stop-color="#0D47A1" stop-opacity="1"/>
+        <stop offset="75%"  stop-color="#0D47A1" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#0D47A1" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="eventailHaut" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#0D47A1" stop-opacity="0.22"/>
+        <stop offset="100%" stop-color="#0D47A1" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="reflet" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.18"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Zone claire -->
+    <path d="M0,0 L172,1 C234,65 269,118 279,282 L279,340 L0,340 Z"
+      fill="url(#zoneGrad)"/>
+
+    <!-- Reflet lumineux -->
+    <path d="M0,0 L172,1 C234,65 269,118 279,282 L279,340 L0,340 Z"
+      fill="url(#reflet)"/>
+
+    <!-- Accent blanc gauche : creux vers le bas, rejoint le vert en x=340 -->
+    <path d="M0,305 C80,330 200,342 340,340 L0,340 Z"
+      fill="#F5F8FB"/>
+
+    <!-- Accent vert droite : creux vers le bas, rejoint le blanc en x=340 -->
+    <path d="M340,340 C460,348 600,332 680,305 L680,340 Z"
+      fill="#A8D63A"/>
+
+    <!-- Éventail bleu -->
+    <path d="M157,1 C219,65 264,118 279,190 C264,118 249,65 187,1 Z"
+      fill="url(#eventailHaut)"/>
+
+    <!-- Trait bleu épais -->
+    <path d="M172,1 C234,65 269,118 279,282 L279,340"
+      fill="none" stroke="url(#traitGrad)" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Reflet blanc sur le trait -->
+    <path d="M172,1 C234,65 269,118 279,282 L279,340"
+      fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Trait fin -->
+    <path d="M172,1 C234,65 269,118 279,282 L279,340"
+      fill="none" stroke="#0D47A1" stroke-width="1.5" stroke-opacity="0.2" stroke-linecap="round"/>
+
+  </svg>
+
+</section>
+
+<section class="services">
+  <div class="services-bg">
+    <svg class="services-obliques" viewBox="0 0 1100 320" preserveAspectRatio="none">
+      <polygon points="0,0 420,0 280,320 0,320" fill="rgba(5,30,80,0.5)"/>
+      <polygon points="350,0 700,0 560,320 210,320" fill="rgba(105,195,227,0.15)"/>
+      <polygon points="750,0 1100,0 1100,320 610,320" fill="rgba(10,50,120,0.4)"/>
+      <polygon points="500,0 580,0 440,320 360,320" fill="rgba(168,214,58,0.25)"/>
+      <polygon points="680,0 720,0 580,320 540,320" fill="rgba(105,195,227,0.2)"/>
+    </svg>
+    <div class="services-circle services-circle--blue"></div>
+    <div class="services-circle services-circle--green"></div>
+  </div>
+
+  <!-- Arc vert concave haut gauche — plein -->
+  <svg class="services-accent-triangle" viewBox="0 0 1100 320" preserveAspectRatio="none">
+    <path d="M0,0 L600,0 Q0,0 0,320 Z" fill="#A8D63A"/>
+  </svg>
+  <div class="container">
+
+    <div class="services-header">
+      <div>
+        <h2>Nos expertises</h2>
+      </div>
+      <div class="services-line"></div>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="card-bg" style="background:linear-gradient(135deg,#0D47A1,#1565C0);">
+          <svg class="card-bg-wave" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,0 100,40 150,20 C170,12 185,5 200,10 L200,0 L0,0 Z" fill="rgba(255,255,255,0.12)"/></svg>
         </div>
-
-        {# FLOATING CARD — certification #}
-        <div class="hero__card hero__card--cert">
-          <div class="hero__card-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <polyline points="9 12 11 14 15 10"/>
+        <div class="card-top" style="background:linear-gradient(135deg,#0D47A1,#1565C0);">
+          <svg class="card-wave-top" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,40 100,0 150,20 C170,28 185,35 200,30 L200,40 L0,40 Z" fill="#fff"/></svg>
+          <div class="card-icon">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="3"/>
+              <circle cx="12" cy="13" r="4"/>
+              <circle cx="8" cy="6" r="1" fill="#111" stroke="none"/>
+              <line x1="11" y1="6" x2="14" y2="6"/>
             </svg>
           </div>
-          <div class="hero__card-body">
-            <strong class="hero__card-title">Qualité garantie</strong>
-            <span class="hero__card-sub">Norme EN 14065</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title--blue">Entretien du linge<br>et des vêtements</h3>
+          <div class="card-stars">★★★★★</div>
+          <p>Lavage professionnel<br>et traitement soigné</p>
+        </div>
+        <div class="card-bar" style="background:linear-gradient(135deg,#0D47A1,#1565C0);"></div>
+        <div class="card-fold" style="background:linear-gradient(135deg,transparent 50%,#0D47A1 50%);"></div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-bg" style="background:linear-gradient(135deg,#69C3E3,#42a8cc);">
+          <svg class="card-bg-wave" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,0 100,40 150,20 C170,12 185,5 200,10 L200,0 L0,0 Z" fill="rgba(255,255,255,0.12)"/></svg>
+        </div>
+        <div class="card-top" style="background:linear-gradient(135deg,#69C3E3,#42a8cc);">
+          <svg class="card-wave-top" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,40 100,0 150,20 C170,28 185,35 200,30 L200,40 L0,40 Z" fill="#fff"/></svg>
+          <div class="card-icon">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H6v10a2 2 0 002 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/>
+            </svg>
           </div>
         </div>
+        <div class="card-body">
+          <h3 class="card-title--cyan">Location de linge<br>et de vêtements</h3>
+          <div class="card-stars">★★★★★</div>
+          <p>Solutions flexibles<br>et sur mesure</p>
+        </div>
+        <div class="card-bar" style="background:linear-gradient(135deg,#69C3E3,#42a8cc);"></div>
+        <div class="card-fold" style="background:linear-gradient(135deg,transparent 50%,#69C3E3 50%);"></div>
+      </div>
 
-        {# FLOATING CARD — livraisons #}
-        <div class="hero__card hero__card--delivery">
-          <div class="hero__card-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="service-card">
+        <div class="card-bg" style="background:linear-gradient(135deg,#A8D63A,#8ab830);">
+          <svg class="card-bg-wave" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,0 100,40 150,20 C170,12 185,5 200,10 L200,0 L0,0 Z" fill="rgba(255,255,255,0.12)"/></svg>
+        </div>
+        <div class="card-top" style="background:linear-gradient(135deg,#A8D63A,#8ab830);">
+          <svg class="card-wave-top" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,40 100,0 150,20 C170,28 185,35 200,30 L200,40 L0,40 Z" fill="#fff"/></svg>
+          <div class="card-icon">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <rect x="1" y="3" width="15" height="13" rx="1"/>
-              <path d="M16 8h4l3 5v3h-7V8z"/>
+              <path d="M16 8h4l3 5v4h-7V8z"/>
               <circle cx="5.5" cy="18.5" r="2.5"/>
               <circle cx="18.5" cy="18.5" r="2.5"/>
             </svg>
           </div>
-          <div class="hero__card-body">
-            <strong class="hero__card-title">Livraison rapide</strong>
-            <span class="hero__card-sub">Région Wallonne</span>
-          </div>
-          <div class="hero__card-pulse" aria-hidden="true"></div>
         </div>
+        <div class="card-body">
+          <h3 class="card-title--green">Logistique<br>et transport</h3>
+          <div class="card-stars">★★★★★</div>
+          <p>Livraison rapide<br>et sécurisée</p>
+        </div>
+        <div class="card-bar" style="background:linear-gradient(135deg,#A8D63A,#8ab830);"></div>
+        <div class="card-fold" style="background:linear-gradient(135deg,transparent 50%,#A8D63A 50%);"></div>
+      </div>
 
-        {# LIME ACCENT SHAPE #}
-        <div class="hero__lime-blob" aria-hidden="true">
-          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,120 C40,60 100,80 160,30 C180,15 200,5 200,0 L200,120 Z" fill="#b2d400"/>
-          </svg>
+      <div class="service-card">
+        <div class="card-bg" style="background:linear-gradient(135deg,#0D47A1,#0a3580);">
+          <svg class="card-bg-wave" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,0 100,40 150,20 C170,12 185,5 200,10 L200,0 L0,0 Z" fill="rgba(255,255,255,0.12)"/></svg>
         </div>
+        <div class="card-top" style="background:linear-gradient(135deg,#0D47A1,#0a3580);">
+          <svg class="card-wave-top" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,40 100,0 150,20 C170,28 185,35 200,30 L200,40 L0,40 Z" fill="#fff"/></svg>
+          <div class="card-icon">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="5" y="5" width="3" height="3" fill="#111" stroke="none"/>
+              <rect x="16" y="5" width="3" height="3" fill="#111" stroke="none"/>
+              <rect x="5" y="16" width="3" height="3" fill="#111" stroke="none"/>
+              <path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title--blue">Gestion et<br>traçabilité</h3>
+          <div class="card-stars">★★★★★</div>
+          <p>Suivi digital et maîtrise<br>des flux</p>
+        </div>
+        <div class="card-bar" style="background:linear-gradient(135deg,#0D47A1,#0a3580);"></div>
+        <div class="card-fold" style="background:linear-gradient(135deg,transparent 50%,#0D47A1 50%);"></div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-bg" style="background:linear-gradient(135deg,#69C3E3,#1a8ab0);">
+          <svg class="card-bg-wave" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,0 100,40 150,20 C170,12 185,5 200,10 L200,0 L0,0 Z" fill="rgba(255,255,255,0.12)"/></svg>
+        </div>
+        <div class="card-top" style="background:linear-gradient(135deg,#69C3E3,#1a8ab0);">
+          <svg class="card-wave-top" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,40 100,0 150,20 C170,28 185,35 200,30 L200,40 L0,40 Z" fill="#fff"/></svg>
+          <div class="card-icon">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title--cyan">Conseils et<br>formations</h3>
+          <div class="card-stars">★★★★★</div>
+          <p>Accompagnement<br>et expertise</p>
+        </div>
+        <div class="card-bar" style="background:linear-gradient(135deg,#69C3E3,#1a8ab0);"></div>
+        <div class="card-fold" style="background:linear-gradient(135deg,transparent 50%,#69C3E3 50%);"></div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-bg" style="background:linear-gradient(135deg,#A8D63A,#6ea020);">
+          <svg class="card-bg-wave" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,0 100,40 150,20 C170,12 185,5 200,10 L200,0 L0,0 Z" fill="rgba(255,255,255,0.12)"/></svg>
+        </div>
+        <div class="card-top" style="background:linear-gradient(135deg,#A8D63A,#6ea020);">
+          <svg class="card-wave-top" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 C50,40 100,0 150,20 C170,28 185,35 200,30 L200,40 L0,40 Z" fill="#fff"/></svg>
+          <div class="card-icon">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+              <circle cx="12" cy="12" r="2" fill="#111" stroke="none"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title--green">Système<br>full-service</h3>
+          <div class="card-stars">★★★★★</div>
+          <p>Une prise en charge<br>complète</p>
+        </div>
+        <div class="card-bar" style="background:linear-gradient(135deg,#A8D63A,#6ea020);"></div>
+        <div class="card-fold" style="background:linear-gradient(135deg,transparent 50%,#A8D63A 50%);"></div>
       </div>
 
     </div>
   </div>
+</section>
 
-  {# BOTTOM WAVE TRANSITION #}
-  <div class="hero__wave" aria-hidden="true">
-    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,90 C240,20 480,80 720,40 C960,0 1200,60 1440,30 L1440,90 Z" fill="#ffffff"/>
-      <path d="M0,90 C360,50 720,70 1080,35 C1260,18 1380,55 1440,50 L1440,90 Z" fill="rgba(255,255,255,0.4)"/>
-    </svg>
+<section class="partenariat">
+  <div class="container">
+    <div class="partenariat-grid">
+
+      <!-- Colonne gauche : texte -->
+      <div class="partenariat-left">
+
+        <div class="partenariat-badge">
+          <div class="partenariat-badge-icon">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0A4993" stroke-width="2.5" stroke-linecap="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <span>Notre engagement, en chiffres</span>
+        </div>
+
+        <h2>Un partenariat<br><span>au cœur du soin</span></h2>
+
+        <p class="partenariat-intro">Avec l'ensemble de ses collaborateurs, Servitex veille au fonctionnement optimal du circuit du linge et à la bonne coordination avec les équipes hospitalières.</p>
+
+        <p class="partenariat-desc">Chaque étape est pensée pour garantir efficacité, hygiène et continuité de service, au plus près des exigences du milieu médical.</p>
+
+        <div class="partenariat-sep"></div>
+
+      </div>
+
+      <!-- Colonne centre : photo -->
+      <div class="partenariat-photo">
+        <img src="{{ asset('image1.png') }}" alt="Équipe Servitex">
+      </div>
+
+      <!-- Colonne droite : 4 cartes stats -->
+      <div class="partenariat-stats">
+
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--accent">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#A8D63A" stroke-width="1.8" stroke-linecap="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              <line x1="12" y1="12" x2="12" y2="16"/>
+              <line x1="10" y1="14" x2="14" y2="14"/>
+            </svg>
+          </div>
+          <div class="stat-number stat-number--accent">+250</div>
+          <div class="stat-label">établissements<br>accompagnés</div>
+          <div class="stat-bar stat-bar--accent"></div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--cyan">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#69C3E3" stroke-width="1.8" stroke-linecap="round">
+              <rect x="2" y="2" width="20" height="20" rx="3"/>
+              <circle cx="12" cy="13" r="4"/>
+              <circle cx="8" cy="6" r="1" fill="#69C3E3" stroke="none"/>
+              <line x1="11" y1="6" x2="14" y2="6"/>
+            </svg>
+          </div>
+          <div class="stat-number stat-number--cyan">12 000</div>
+          <div class="stat-label">tonnes de linge<br>traitées / an</div>
+          <div class="stat-bar stat-bar--cyan"></div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--primary">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0D47A1" stroke-width="1.8" stroke-linecap="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="stat-number stat-number--primary">99%</div>
+          <div class="stat-label">de taux<br>de conformité</div>
+          <div class="stat-bar stat-bar--primary"></div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--accent">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#A8D63A" stroke-width="1.8" stroke-linecap="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="stat-number stat-number--accent">350+</div>
+          <div class="stat-label">collaborateurs<br>mobilisés</div>
+          <div class="stat-bar stat-bar--accent"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="eco">
+
+  <div class="eco-img">
+    <img src="{{ asset('header.png') }}" alt="Éco-responsabilité Servitex" class="eco-bg-photo">
+    <div class="eco-overlay"></div>
   </div>
 
-  {# SERVICES STRIP — bottom icons row #}
-  <div class="hero__services-strip">
-    <div class="hero__services-inner">
+  <div class="container">
+    <div class="eco-grid">
 
-      {% set services = [
-        { icon: 'washing',   label: 'Entretien du linge',       sub: 'et des vêtements' },
-        { icon: 'hanger',    label: 'Location de linge',        sub: 'et de vêtements' },
-        { icon: 'truck',     label: 'Logistique',               sub: 'et transport' },
-        { icon: 'tracking',  label: 'Gestion et',              sub: 'traçabilité' },
-        { icon: 'advice',    label: 'Conseils et',              sub: 'formations' },
-        { icon: 'fullserv',  label: 'Système',                 sub: 'full-service' },
-      ] %}
+      <div class="eco-left">
 
-      {% for service in services %}
-        <div class="hero__service-item">
-          <div class="hero__service-icon-wrap">
-
-            {% if service.icon == 'washing' %}
-              <svg class="hero__service-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="6" y="8" width="36" height="32" rx="3" stroke="currentColor" stroke-width="2"/>
-                <circle cx="24" cy="27" r="8" stroke="currentColor" stroke-width="2"/>
-                <circle cx="24" cy="27" r="4" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
-                <rect x="10" y="12" width="4" height="4" rx="1" fill="currentColor" opacity=".4"/>
-                <rect x="16" y="12" width="4" height="4" rx="1" fill="currentColor" opacity=".4"/>
-                <line x1="6" y1="20" x2="42" y2="20" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-
-            {% elseif service.icon == 'hanger' %}
-              <svg class="hero__service-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 14 C24 14 24 10 28 10 C32 10 32 14 28 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M24 14 L6 34 H42 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <line x1="6" y1="38" x2="42" y2="38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-
-            {% elseif service.icon == 'truck' %}
-              <svg class="hero__service-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="14" width="26" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
-                <path d="M30 20 H40 L44 28 V34 H30 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <circle cx="12" cy="36" r="4" stroke="currentColor" stroke-width="2"/>
-                <circle cx="36" cy="36" r="4" stroke="currentColor" stroke-width="2"/>
-                <line x1="16" y1="36" x2="32" y2="36" stroke="currentColor" stroke-width="2"/>
-              </svg>
-
-            {% elseif service.icon == 'tracking' %}
-              <svg class="hero__service-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="4" fill="currentColor"/>
-                <path d="M14 24 C14 18.5 18.5 14 24 14 C29.5 14 34 18.5 34 24 C34 29.5 29.5 34 24 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M8 24 C8 14.6 15.2 7 24 7 C32.8 7 40 14.6 40 24 C40 33.4 33 40 24 40" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"/>
-              </svg>
-
-            {% elseif service.icon == 'advice' %}
-              <svg class="hero__service-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 8 C14.6 8 7 14.6 7 24 C7 28.4 8.8 32.4 11.8 35.2 L10 40 L15.8 38.4 C18.3 39.7 21.1 40.4 24 40.4 C33.4 40.4 41 33.8 41 24 C41 14.6 33.4 8 24 8 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <line x1="18" y1="22" x2="30" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="18" y1="28" x2="26" y2="28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-
-            {% else %}
-              <svg class="hero__service-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="6,6 18,6 18,18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <polyline points="42,42 30,42 30,30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <polyline points="42,6 30,6 30,18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <polyline points="6,42 18,42 18,30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            {% endif %}
-
+        <div class="eco-badge">
+          <div class="eco-badge-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round">
+              <path d="M8 12l2 2 4-4"/>
+              <circle cx="12" cy="12" r="10"/>
+            </svg>
           </div>
-          <div class="hero__service-label">
-            <strong>{{ service.label }}</strong>
-            <span>{{ service.sub }}</span>
-          </div>
+          <span>Éco-responsabilité</span>
         </div>
-      {% endfor %}
 
+        <h2>Un engagement<br><span>durable, mesurable</span><br>et concret</h2>
+
+        <div class="eco-sep"></div>
+
+        <p>Nous intégrons des pratiques responsables à chaque étape de notre chaîne, de la gestion des ressources à la réduction de notre empreinte carbone.</p>
+
+        <div class="eco-list">
+
+          <div class="eco-item eco-item--accent">
+            <div class="eco-item-icon" style="background:#A8D63A;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+              </svg>
+            </div>
+            <span>Réduction significative de la consommation d'eau</span>
+          </div>
+
+          <div class="eco-item eco-item--cyan">
+            <div class="eco-item-icon" style="background:#69C3E3;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+                <path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9z"/>
+                <path d="M3.5 13.5C4.5 8.5 9 4.5 14 4.5c-1 5-5.5 9-10.5 9z"/>
+              </svg>
+            </div>
+            <span>Utilisation de produits certifiés éco-labels européens</span>
+          </div>
+
+          <div class="eco-item eco-item--primary">
+            <div class="eco-item-icon" style="background:#0D47A1;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+                <rect x="1" y="3" width="15" height="13" rx="1"/>
+                <path d="M16 8h4l3 5v4h-7V8z"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <span>Transition vers des carburants alternatifs pour nos livraisons</span>
+          </div>
+
+          <div class="eco-item eco-item--accent">
+            <div class="eco-item-icon" style="background:#A8D63A;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+                <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s1.34-9 3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/>
+              </svg>
+            </div>
+            <span>Récupération de chaleur et recyclage en circuit fermé</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="eco-right">
+
+        <!-- Card 1 — vert accent -->
+        <div class="eco-card eco-card--accent">
+          <div class="eco-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+            </svg>
+          </div>
+          <div class="eco-card-number">-40%</div>
+          <div class="eco-card-label">consommation d'eau<br>depuis 2014</div>
+          <div class="eco-card-bar"></div>
+        </div>
+
+        <!-- Card 2 — bleu primary avec image ISO -->
+        <div class="eco-card eco-card--primary">
+          <div class="eco-card-img">
+            <img src="{{ asset('iso-certification.png') }}" alt="Certification ISO">
+          </div>
+          <div class="eco-card-number">ISO</div>
+          <div class="eco-card-label">certifications qualité<br>et environnement</div>
+          <div class="eco-card-bar eco-card-bar--cyan"></div>
+        </div>
+
+        <!-- Card 3 — bleu ciel -->
+        <div class="eco-card eco-card--cyan">
+          <div class="eco-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+              <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s1.34-9 3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/>
+            </svg>
+          </div>
+          <div class="eco-card-number">100%</div>
+          <div class="eco-card-label">linge trié et recyclé<br>en fin de vie</div>
+          <div class="eco-card-bar"></div>
+        </div>
+
+        <!-- Card 4 — bleu foncé avec image CO2 -->
+        <div class="eco-card eco-card--dark">
+          <div class="eco-card-img">
+            <img src="{{ asset('co2-certification.png') }}" alt="Réduction CO2">
+          </div>
+          <div class="eco-card-number eco-card-number--accent">-25%</div>
+          <div class="eco-card-label">émissions CO₂<br>sur 5 ans</div>
+          <div class="eco-card-bar eco-card-bar--accent"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="entreprise">
+
+  
+
+  <div class="container my-4">
+
+    <!-- Titre en haut -->
+    <h2>Traitement de linge pour <br><span>hôpitaux, maisons de repos, hôtels,...</span></h2>
+
+    <div class="entreprise-layout">
+
+      <!-- Image -->
+      <div class="entreprise-img-wrap">
+        <img src="{{ asset('image2.avif') }}" alt="Bâtiment Servitex" class="entreprise-img">
+      </div>
+
+      <!-- Texte chevauchant -->
+      <div class="entreprise-content">
+
+        <div class="entreprise-watermark">
+          <svg width="36" height="36" viewBox="0 0 52 52" fill="none">
+            <circle cx="26" cy="26" r="18" stroke="#0D47A1" stroke-width="2"/>
+            <path d="M14 26 Q14 18 26 18 Q38 18 38 26" stroke="#69C3E3" stroke-width="2" fill="none"/>
+            <circle cx="26" cy="26" r="4" fill="#A8D63A"/>
+          </svg>
+        </div>
+
+        <p class="entreprise-intro">
+          <strong>SERVITEX</strong> est une blanchisserie industrielle hospitalière située au cœur du pays de Herve à quelques pas des frontières allemandes et néerlandaises.
+        </p>
+
+        <p class="entreprise-text">
+          Dans un climat propre à une entreprise familiale, nous exerçons notre activité depuis bientôt 60 ans au service de collectivités : institutions hospitalières, maisons de repos, institutions parastatales, centres de vacances...
+        </p>
+
+        <p class="entreprise-text">
+          Nos structures répondent aux recommandations du Conseil Supérieur d'Hygiène en matière de traitement de linge des institutions de soins afin d'atteindre ses objectifs chimiques, physiques et microbiologiques.
+        </p>
+
+        <a href="#" class="entreprise-btn">
+          <span>Nous contactez</span>
+          <span class="entreprise-btn-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+
+      </div>
     </div>
   </div>
 
 </section>
-
-
-
-</header>
-
-<main>
-
-
-    
-</main>
-    
-</div>
 {% endblock %}
