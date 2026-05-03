@@ -1,3 +1,4 @@
+/* Setting Scale 1.125 */
 
 h1 {
   font-weight: 800;
@@ -37,7 +38,7 @@ h2 {
 
 p {
   font-size: 15px;
-
+  font-family: "Roboto", sans-serif;
   @include respond(tablet) {
     font-size: 16px;
   }

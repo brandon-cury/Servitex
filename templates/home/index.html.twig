@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Servitex{% endblock %}
 
 {% block body %}
 <style>
@@ -34,9 +34,16 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Entretien du linge et des vêtements</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Location de linge et de vêtements</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Logistique et transport</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Gestion et traçabilité</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Conseils et formations</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Systèmefull-service</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -68,7 +75,7 @@
     </div>
 
     <h1>Blanchisserie</h1>
-    <h2>industrielle et hospitalière</h2>
+    <h2>Industrielle et Hospitalière</h2>
 
     <div class="hero-separator">
       <span class="sep-green"></span>
@@ -77,10 +84,16 @@
 
     <div class="hero-dot">
       <span class="dot"></span>
-      au cœur de la Région Wallonne
+      Au cœur de la Région Wallonne
     </div>
 
-    <p>Depuis 1956, Servitex accompagne les professionnels de la santé et de l'industrie avec un service de blanchisserie <strong>fiable, durable et de proximité.</strong></p>
+    <p>
+      Depuis 1956, nous accompagnons les professionnels de la santé et de l'industrie.
+      Un service <strong class="kw-blue">fiable</strong>,
+      <strong class="kw-green">durable</strong>
+      et <strong class="kw-cyan">de proximité</strong> —
+      pensé pour répondre aux exigences les plus strictes du milieu médical.
+    </p>
 
     <a href="#" class="hero-btn">
       Découvrir nos services
@@ -117,42 +130,19 @@
       </linearGradient>
     </defs>
 
-    <!-- Zone claire -->
-    <path d="M0,0 L172,1 C234,65 269,118 279,282 L279,340 L0,340 Z"
-      fill="url(#zoneGrad)"/>
-
-    <!-- Reflet lumineux -->
-    <path d="M0,0 L172,1 C234,65 269,118 279,282 L279,340 L0,340 Z"
-      fill="url(#reflet)"/>
-
-    <!-- Accent blanc gauche : creux vers le bas, rejoint le vert en x=340 -->
-    <path d="M0,305 C80,330 200,342 340,340 L0,340 Z"
-      fill="#F5F8FB"/>
-
-    <!-- Accent vert droite : creux vers le bas, rejoint le blanc en x=340 -->
-    <path d="M340,340 C460,348 600,332 680,305 L680,340 Z"
-      fill="#A8D63A"/>
-
-    <!-- Éventail bleu -->
-    <path d="M157,1 C219,65 264,118 279,190 C264,118 249,65 187,1 Z"
-      fill="url(#eventailHaut)"/>
-
-    <!-- Trait bleu épais -->
-    <path d="M172,1 C234,65 269,118 279,282 L279,340"
-      fill="none" stroke="url(#traitGrad)" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- Reflet blanc sur le trait -->
-    <path d="M172,1 C234,65 269,118 279,282 L279,340"
-      fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"/>
-
-    <!-- Trait fin -->
-    <path d="M172,1 C234,65 269,118 279,282 L279,340"
-      fill="none" stroke="#0D47A1" stroke-width="1.5" stroke-opacity="0.2" stroke-linecap="round"/>
-
+    <path d="M0,0 L172,1 C234,65 269,118 279,282 L279,340 L0,340 Z" fill="url(#zoneGrad)"/>
+    <path d="M0,0 L172,1 C234,65 269,118 279,282 L279,340 L0,340 Z" fill="url(#reflet)"/>
+    <path d="M0,305 C80,330 200,342 340,340 L0,340 Z" fill="#F5F8FB"/>
+    <path d="M340,340 C460,348 600,332 680,305 L680,340 Z" fill="#A8D63A"/>
+    <path d="M157,1 C219,65 264,118 279,190 C264,118 249,65 187,1 Z" fill="url(#eventailHaut)"/>
+    <path d="M172,1 C234,65 269,118 279,282 L279,340" fill="none" stroke="url(#traitGrad)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M172,1 C234,65 269,118 279,282 L279,340" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M172,1 C234,65 269,118 279,282 L279,340" fill="none" stroke="#0D47A1" stroke-width="1.5" stroke-opacity="0.2" stroke-linecap="round"/>
   </svg>
 
 </section>
-
+</header>
+<main>
 <section class="services">
   <div class="services-bg">
     <svg class="services-obliques" viewBox="0 0 1100 320" preserveAspectRatio="none">
@@ -197,7 +187,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3 class="card-title--blue">Entretien du linge<br>et des vêtements</h3>
+          <h3 class="card-title--blue">Entretien du linge et des vêtements</h3>
           <div class="card-stars">★★★★★</div>
           <p>Lavage professionnel<br>et traitement soigné</p>
         </div>
@@ -218,7 +208,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3 class="card-title--cyan">Location de linge<br>et de vêtements</h3>
+          <h3 class="card-title--cyan">Location de linge et de vêtements</h3>
           <div class="card-stars">★★★★★</div>
           <p>Solutions flexibles<br>et sur mesure</p>
         </div>
@@ -242,7 +232,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3 class="card-title--green">Logistique<br>et transport</h3>
+          <h3 class="card-title--green">Logistique et transport</h3>
           <div class="card-stars">★★★★★</div>
           <p>Livraison rapide<br>et sécurisée</p>
         </div>
@@ -269,7 +259,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3 class="card-title--blue">Gestion et<br>traçabilité</h3>
+          <h3 class="card-title--blue">Gestion et traçabilité</h3>
           <div class="card-stars">★★★★★</div>
           <p>Suivi digital et maîtrise<br>des flux</p>
         </div>
@@ -291,7 +281,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3 class="card-title--cyan">Conseils et<br>formations</h3>
+          <h3 class="card-title--cyan">Conseils et formations</h3>
           <div class="card-stars">★★★★★</div>
           <p>Accompagnement<br>et expertise</p>
         </div>
@@ -314,7 +304,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3 class="card-title--green">Système<br>full-service</h3>
+          <h3 class="card-title--green">Système full-service</h3>
           <div class="card-stars">★★★★★</div>
           <p>Une prise en charge<br>complète</p>
         </div>
@@ -424,11 +414,6 @@
 
 <section class="eco">
 
-  <div class="eco-img">
-    <img src="{{ asset('header.png') }}" alt="Éco-responsabilité Servitex" class="eco-bg-photo">
-    <div class="eco-overlay"></div>
-  </div>
-
   <div class="container">
     <div class="eco-grid">
 
@@ -444,11 +429,16 @@
           <span>Éco-responsabilité</span>
         </div>
 
-        <h2>Un engagement<br><span>durable, mesurable</span><br>et concret</h2>
-
-        <div class="eco-sep"></div>
-
-        <p>Nous intégrons des pratiques responsables à chaque étape de notre chaîne, de la gestion des ressources à la réduction de notre empreinte carbone.</p>
+        <div class="eco-header">
+          <div class="eco-header-text">
+            <h2>Un engagement<br><span>durable, mesurable</span><br>et concret</h2>
+            <div class="eco-sep"></div>
+            <p>Nous intégrons des pratiques responsables à chaque étape de notre chaîne, de la gestion des ressources à la réduction de notre empreinte carbone.</p>
+          </div>
+          <div class="eco-header-img">
+            <img src="{{ asset('image/image3.jpg') }}" alt="Éco-responsabilité Servitex">
+          </div>
+        </div>
 
         <div class="eco-list">
 
@@ -497,44 +487,36 @@
 
       <div class="eco-right">
 
-        <!-- Card 1 — vert accent -->
         <div class="eco-card eco-card--accent">
-          <div class="eco-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-            </svg>
+          <div class="eco-card-img">
+            <img src="{{ asset('image/gouttelette.png') }}" alt="Certification ISO">
           </div>
           <div class="eco-card-number">-40%</div>
           <div class="eco-card-label">consommation d'eau<br>depuis 2014</div>
           <div class="eco-card-bar"></div>
         </div>
 
-        <!-- Card 2 — bleu primary avec image ISO -->
         <div class="eco-card eco-card--primary">
           <div class="eco-card-img">
-            <img src="{{ asset('iso-certification.png') }}" alt="Certification ISO">
+            <img src="{{ asset('image/iso.jpg') }}" alt="Certification ISO">
           </div>
           <div class="eco-card-number">ISO</div>
           <div class="eco-card-label">certifications qualité<br>et environnement</div>
           <div class="eco-card-bar eco-card-bar--cyan"></div>
         </div>
 
-        <!-- Card 3 — bleu ciel -->
         <div class="eco-card eco-card--cyan">
           <div class="eco-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
-              <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s1.34-9 3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-recycle-icon lucide-recycle"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg>
           </div>
           <div class="eco-card-number">100%</div>
           <div class="eco-card-label">linge trié et recyclé<br>en fin de vie</div>
           <div class="eco-card-bar"></div>
         </div>
 
-        <!-- Card 4 — bleu foncé avec image CO2 -->
         <div class="eco-card eco-card--dark">
           <div class="eco-card-img">
-            <img src="{{ asset('co2-certification.png') }}" alt="Réduction CO2">
+            <img src="{{ asset('image/co2.png') }}" alt="Réduction CO2">
           </div>
           <div class="eco-card-number eco-card-number--accent">-25%</div>
           <div class="eco-card-label">émissions CO₂<br>sur 5 ans</div>
@@ -599,4 +581,91 @@
   </div>
 
 </section>
+</main>
+<footer>
+    <div style="font-family:'Nunito',sans-serif;background:#0D47A1;padding:3rem 2.5rem 1.5rem;">
+  <div style="max-width:1200px;margin:0 auto;">
+
+    <div style="display:grid;grid-template-columns: 1fr 1fr 1fr auto;gap:3rem;align-items:start;margin-bottom:2rem;">
+
+      <!-- Logo gauche — image uniquement -->
+      <div style="width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:1rem;">
+        <img src="{{ asset('/logo/grand_logo.png') }}" alt="Logo Servitex" style="width:100%;height:100%;object-fit:contain; background:#fff;min-width:120px">
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.7);line-height:1.6;max-width:150px;margin:0;">
+          Au service des professionnels de la santé depuis 1956.
+        </p>
+      </div>
+
+      <!-- Adresse 1 : Welkenraedt -->
+      <div>
+        <h4 style="font-size:0.78rem;font-weight:800;color:#A8D63A;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 1rem;">Servitex Welkenraedt</h4>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.7;margin:0 0 1rem;">
+          Rue de l'Yser 141,<br>
+          4840 Welkenraedt
+        </p>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;">
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);">
+            Service commercial :
+            <a href="tel:087675643" style="color:#69C3E3;font-weight:600;text-decoration:underline;">087 67 56 43</a>
+          </div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);">
+            Service administratif :
+            <a href="tel:087301200" style="color:#69C3E3;font-weight:600;text-decoration:underline;">087 30 12 00</a>
+          </div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);">
+            E-mail :
+            <a href="mailto:info@servitex.be" style="color:#69C3E3;font-weight:600;text-decoration:none;">info@servitex.be</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adresse 2 : Battice -->
+      <div>
+        <h4 style="font-size:0.78rem;font-weight:800;color:#A8D63A;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 1rem;">Servitex Battice</h4>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.7;margin:0 0 1rem;">
+          Rue de Chesseroux, 7<br>
+          4651 Battice
+        </p>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;">
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);">
+            Service commercial :
+            <a href="tel:087675643" style="color:#69C3E3;font-weight:600;text-decoration:underline;">087 67 56 43</a>
+          </div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);">
+            Service administratif :
+            <a href="tel:087301200" style="color:#69C3E3;font-weight:600;text-decoration:underline;">087 30 12 00</a>
+          </div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);">
+            E-mail :
+            <a href="mailto:info@servitex.be" style="color:#69C3E3;font-weight:600;text-decoration:none;">info@servitex.be</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map à droite -->
+      <div style="width:400px;border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,0.2);border:2px solid rgba(255,255,255,0.15);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.8895961031944!2d5.961134812150584!3d50.666310371679515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c08fbbe9622c81%3A0xa1ce33b2808455b2!2sRue%20de%20l&#39;Yser%20141%2C%204840%20Welkenraedt!5e0!3m2!1sfr!2sbe!4v1777803258590!5m2!1sfr!2sbe" 
+        width="400" 
+        height="200"
+         style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div style="background:rgba(255,255,255,0.08);padding:0.6rem 0.8rem;display:flex;align-items:center;gap:6px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#A8D63A" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span style="font-size:0.68rem;color:#A8D63A;font-weight:700;">Voir sur Google Maps</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Barre copyright -->
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.2rem;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:0.72rem;color:rgba(255,255,255,0.45);">© 2025 Servitex. Tous droits réservés.</span>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <div style="width:6px;height:6px;border-radius:50%;background:#A8D63A;"></div>
+        <span style="font-size:0.68rem;color:rgba(255,255,255,0.5);font-weight:600;">Région Wallonne — Depuis 1956</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</footer>
 {% endblock %}
